@@ -32,7 +32,7 @@
 <details>
     <summary>Leads</summary>
     <details>
-        <summary>- Leads Data</summary>
+        <summary>Leads Data</summary>
         <br>
         <img src="README_pics/data_leads.png"/>
     </details>
