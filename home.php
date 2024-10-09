@@ -30,20 +30,47 @@ if(!isset($_SESSION['admin'])) {
 </script>
 
 <style>
-        /* Custom CSS for DataTables */
-        .dataTables_wrapper .dataTables_paginate .paginate_button {
-            padding: 0.5rem 1rem;
-            margin: 0 0.1rem;
-        }
-        .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-            background: #007bff;
-            color: white;
-        }
-        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-            background: #0056b3;
-            color: white;
-        }
-    </style>
+    .dataTables_wrapper .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dataTables_length select {
+        display: inline-block;
+        width: auto;
+        margin-left: 0.5rem;
+    }
+
+    .dataTables_length{
+        float: left !important;
+    }
+
+    .dataTables_filter {
+        float: right !important;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+    .dataTables_filter label {
+        display: flex;
+        align-items: center;
+    }
+
+    .dataTables_paginate {
+        float: right !important;
+        margin-top: 20px;
+    }
+
+    .dataTables_filter input {
+        width: auto;
+        margin-left: 10px;
+    }
+
+    .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter {
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+</style>
 </head>
 <body>
 
@@ -124,31 +151,32 @@ if(!isset($_SESSION['admin'])) {
         
         ?>
     </div>
-    
-    <script src="js/datatables/jquery-3.7.1.js"></script>
-    <!-- <script src="js/datatables/bootstrap.bundle.min.js"></script> -->
-    <script src="js/datatables/dataTables.bootstrap5.js"></script>
-    <script src="js/datatables/dataTables.js"></script>
-    <script src="js/script.js"></script>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Script custom -->
+<script src="js/script.js"></script>
 
     <script>
     $(document).ready(function() {
         $('#data').DataTable();
 
-        // Remove active class from all sidebar items and add it to the clicked item
         $('.sidebar-item a').on('click', function() {
             $('.sidebar-item').removeClass('active');
             $(this).closest('.sidebar-item').addClass('active');
         });
 
-        // Set the active sidebar item based on the current URL parameters
-        var currentPage = window.location.search;
-        if (currentPage === '') {
-            $('#leads-sidebar').addClass('active'); // Keep Leads active by default
-        } else if (currentPage.includes('halaman=dataproduk')) {
-            $('#products-sidebar').addClass('active'); // Products active
-        } else if (currentPage.includes('halaman=datasales')) {
-            $('#sales-sidebar').addClass('active'); // Sales active
+        var currentPage = new URLSearchParams(window.location.search).get('halaman');
+        $('.sidebar-item').removeClass('active');
+
+        if (!currentPage || currentPage === 'dataleads' || currentPage === "tambahleads" || currentPage === "hapusleads" || currentPage === "ubahleads") {
+            $('#leads-sidebar').addClass('active');
+        } else if (currentPage === 'dataproduk' || currentPage === "tambahproduk" || currentPage === "ubahproduk") {
+            $('#products-sidebar').addClass('active'); 
+        } else if (currentPage === 'datasales' || currentPage === "tambahsales" || currentPage === "ubahsales") {
+            $('#sales-sidebar').addClass('active'); 
         }
     });
     </script>

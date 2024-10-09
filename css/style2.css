@@ -110,6 +110,11 @@ a.sidebar-link:hover{
     position: relative;
 }
 
+.sidebar-item.active a{
+    background-color: #0056b3;
+    color: white;
+}
+
 #sidebar:not(.expand) .sidebar-item .sidebar-dropdown{
     position: absolute;
     top: 0;
