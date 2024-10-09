@@ -31,17 +31,17 @@
 
 <details>
     <summary>Leads</summary>
-    <details style="margin-left: 20px;">
-        <summary>Leads Data</summary>
+    <details>
+        <summary>- Leads Data</summary>
         <br>
         <img src="README_pics/data_leads.png"/>
     </details>
-    <details style="margin-left: 20px;">
+    <details>
         <summary>Update A Lead</summary>
         <br>
         <img src="README_pics/ubah_leads.png"/>
     </details>
-    <details style="margin-left: 20px;">
+    <details>
         <summary>Add New Lead</summary>
         <br>
         <img src="README_pics/tambah_leads.png"/>
@@ -50,17 +50,17 @@
 
 <details>
     <summary>Products</summary>
-    <details style="margin-left: 20px;">
+    <details>
         <summary>Products Data</summary>
         <br>
         <img src="README_pics/data_produk.png"/>
     </details>
-    <details style="margin-left: 20px;">
+    <details>
         <summary>Update A Product</summary>
         <br>
         <img src="README_pics/ubah_produk.png"/>
     </details>
-    <details style="margin-left: 20px;">
+    <details>
         <summary>Add New Product</summary>
         <br>
         <img src="README_pics/tambah_produk.png"/>
@@ -69,17 +69,17 @@
 
 <details>
     <summary>Sales</summary>
-    <details style="margin-left: 20px;">
+    <details>
         <summary>Sales Data</summary>
         <br>
         <img src="README_pics/data_sales.png"/>
     </details>
-    <details style="margin-left: 20px;">
+    <details>
         <summary>Update Sales</summary>
         <br>
         <img src="README_pics/ubah_sales.png"/>
     </details>
-    <details style="margin-left: 20px;">
+    <details>
         <summary>Add New Sales</summary>
         <br>
         <img src="README_pics/tambah_sales.png"/>
