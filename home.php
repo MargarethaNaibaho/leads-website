@@ -84,7 +84,7 @@ if(!isset($_SESSION['admin'])) {
             </ul>
 
             <div class="sidebar-footer">
-                <a href="" class="sidebar-link">
+                <a href="home.php?halaman=logout" class="sidebar-link">
                     <i class="lni lni-exit"></i>
                     <span>Logout</span>
                 </a>
@@ -115,6 +115,8 @@ if(!isset($_SESSION['admin'])) {
                 include 'sales/add_new_sales.php';
             } else if($_GET['halaman'] == 'ubahsales'){
                 include 'sales/update_sale.php';
+            } else if($_GET['halaman'] == 'logout'){
+                include 'logout.php';
             }
         } else{
             include 'leads/data_leads.php';
